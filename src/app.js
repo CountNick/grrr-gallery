@@ -1,3 +1,11 @@
 import './scss/app.scss'
+import  { API } from './helpers/api.js'
 
-console.log('js works')
+const app = async () => {
+    const pictures = await API.getPictures()
+
+    console.log(pictures)
+}
+
+// init 
+app()
