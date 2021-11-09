@@ -1,0 +1,27 @@
+{
+  "name": "grrr-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "source": "public/index.html",
+  "scripts": {
+    "dev": "npm run clean && parcel public/index.html --dist-dir development -p 3000",
+    "build": "rimraf ./dist && parcel build public/*.html --dist-dir dist --public-url ./",
+    "clean": "rimraf ./development && rimraf ./.parcel-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CountNick/grrr-gallery.git"
+  },
+  "author": "Nick Meijer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CountNick/grrr-gallery/issues"
+  },
+  "homepage": "https://github.com/CountNick/grrr-gallery#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.43.4"
+  }
+}
