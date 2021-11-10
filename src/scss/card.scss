@@ -2,9 +2,23 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
 
     .card__image {
         width: 100%;
         object-fit: cover;
-    } 
+        height: 60%;
+    }
+    
+    .card__download-btn {
+        color: $text-color;
+        text-decoration: none;
+
+        &:visited {
+            color: $text-color;
+            text-decoration: none;
+        }
+
+    }
 }
