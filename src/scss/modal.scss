@@ -8,8 +8,21 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 
-    .modal__image {
-        margin: auto;
-        width: 80%;
+    .modal__content {
+        display: flex;
+        flex-direction: column;
+        color: $secondary-text-color;
+
+        .modal__close-btn {
+            margin-left: auto;
+            margin-right: 1em;
+        }
+
+        .modal__image {
+            margin: auto;
+            width: 80%;
+        }
+
     }
+    
 }

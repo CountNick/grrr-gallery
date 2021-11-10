@@ -26,7 +26,12 @@ const app = async () => {
     allCards.forEach(card => card.addEventListener('click', (e) => {
         // find the clicked picture in pictures array based on id
         const clickedPictue = pictures.photos.find(picture => e.target.id == picture.id)
-        console.log('clickedPicture: ', clickedPictue)
+        // render the popup modal with picture to the body of the document
+        document.body.appendChild(Modal(clickedPictue.src.original, `Picture by ${clickedPictue.photographer}`))
+        // select the close button of the modal
+        const modalCloseButton = document.querySelector('.modal__close-btn')
+
+        modalCloseButton.addEventListener('click', (e) => e.target.parentNode.parentNode.remove())
     }))
 }
 
