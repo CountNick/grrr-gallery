@@ -2,7 +2,7 @@
 .main-header__container {
     opacity: 0;
     transition: $fade-transition;
-    height: 50vh;
+    height: 80vh;
     margin-bottom: 10%;
 
     .main-header__content {
@@ -60,4 +60,13 @@
             font-size: 1.8em;
         }
     }
+}
+
+// mediaquery
+@media only screen and (min-width: 750px) {
+
+    .main-header__container { 
+        height: 50vh;
+    }
+
 }
