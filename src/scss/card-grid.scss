@@ -4,5 +4,6 @@
     display: grid;
     /*max of 3 rows items per rows, used minmax instead of mediaquery*/
     grid-template-columns:repeat(auto-fill,minmax(max(250px, 100%/4),1fr));
+    grid-auto-rows: 1fr;
     grid-gap: 2em;
 }
