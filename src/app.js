@@ -78,27 +78,30 @@ const App = async () => {
   // add click event to each card
   allCards.forEach((card) =>
     card.addEventListener("click", (e) => {
-      // find the clicked picture in pictures array based on id
-      const clickedPictue = pictures.photos.find(
-        (picture) => e.target.id == picture.id
-      );
-      // render the popup modal with picture to the body of the document
-      document.body.appendChild(
-        Modal(
-          clickedPictue.src.original,
-          `Picture by ${clickedPictue.photographer}`
-        )
-      );
-      // select the close button of the modal
-      const modalCloseButton = document.querySelector(".modal__close-btn");
-      // select thed modal container
-      const modalContainer = document.querySelector(".modal__container");
-      // wait for the modal to be rendered first than add active class
-      setTimeout(() => modalContainer.classList.add("active"), 1);
-      // remove modal from DOM
-      modalCloseButton.addEventListener("click", (e) =>
-        modalContainer.remove()
-      );
+      //if the clicked item is not the download button open the modal
+      if (!e.target.classList.contains("card__download-btn")) {
+        // find the clicked picture in pictures array based on id
+        const clickedPictue = pictures.photos.find(
+          (picture) => e.target.id == picture.id
+        );
+        // render the popup modal with picture to the body of the document
+        document.body.appendChild(
+          Modal(
+            clickedPictue.src.original,
+            `Picture by ${clickedPictue.photographer}`
+          )
+        );
+        // select the close button of the modal
+        const modalCloseButton = document.querySelector(".modal__close-btn");
+        // select thed modal container
+        const modalContainer = document.querySelector(".modal__container");
+        // wait for the modal to be rendered first than add active class
+        setTimeout(() => modalContainer.classList.add("active"), 1);
+        // remove modal from DOM
+        modalCloseButton.addEventListener("click", (e) =>
+          modalContainer.remove()
+        );
+      }
     })
   );
 };
