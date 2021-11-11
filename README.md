@@ -8,14 +8,16 @@
 - Show picture in modal
 - Headers
 - Loading state
+- The loading 
 
-### Time constraints
+## Time constraints
 
 Due to time constrants I wasn't able to fix these things: 
  - The heights of the grid rows to be set to the height of it's content.
  - Image reflow
  - Show the amount of images shown
  - Load more images from the API
+ - The download button is not working, because the images aren't from the same origin. Made the concession to open the image on a blank page for users to save the image themselves.
 
 ## Technologies used
 
