@@ -1,6 +1,10 @@
 .modal__container {
+    opacity: 0;
+    transition: $fade-transition;
     position: fixed;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
     top: 0;
     left:0;
     width: 100%;
@@ -11,11 +15,16 @@
     .modal__content {
         display: flex;
         flex-direction: column;
+        color: #fff;
+        margin: auto;
+        width: 80%;
+        max-width: 450px;
         color: $secondary-text-color;
 
         .modal__close-btn {
             margin-left: auto;
             margin-right: 1em;
+            cursor: $clickable;
         }
 
         .modal__image {

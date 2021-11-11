@@ -3,22 +3,44 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 70%;
+    height: 50%;
+    cursor: $clickable;
+    transition: background-color 0.5s ease;
 
-    .card__image {
-        width: 100%;
-        object-fit: cover;
+    .card__image-overlay{
         height: 60%;
+        position: relative;
+        
+        &:after {
+            content: '\A';
+            position: absolute;
+            width: 100%; 
+            height:100%;
+            top:0; 
+            left:0;
+            background:rgba(245,187,17,0.6);
+            opacity: 0;
+            transition: all 1s;
+            -webkit-transition: all 1s;
+        }
+
+        &:hover:after, &:active:after {
+                opacity: 1;
+            }
+
+        .card__image {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+
+        }
     }
+
+    
     
     .card__download-btn {
         color: $text-color;
         text-decoration: none;
-
-        &:visited {
-            color: $text-color;
-            text-decoration: none;
-        }
 
     }
 }

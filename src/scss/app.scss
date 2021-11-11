@@ -21,3 +21,17 @@ body {
 .card-grid__container {
     margin: $global-margin
 }
+
+.loader {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: $fade-transition;
+}
+
+.active {
+    opacity: 1;
+}
