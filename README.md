@@ -18,6 +18,7 @@ Due to time constrants I wasn't able to fix these things:
  - Show the amount of images shown
  - Load more images from the API
  - The download button is not working, because the images aren't from the same origin. Made the concession to open the image on a blank page for users to save the image themselves.
+ - There's nothing to prevent users from scrolling when the modal is opened now
 
 ## Technologies used
 
