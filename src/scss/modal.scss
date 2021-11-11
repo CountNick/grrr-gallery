@@ -1,4 +1,6 @@
 .modal__container {
+    opacity: 0;
+    transition: $fade-transition;
     position: fixed;
     display: flex;
     justify-content: center;

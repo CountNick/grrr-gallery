@@ -28,6 +28,10 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    opacity: 1;
+    opacity: 0;
     transition: $fade-transition;
+}
+
+.active {
+    opacity: 1;
 }
