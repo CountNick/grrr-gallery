@@ -2,15 +2,35 @@ import './scss/app.scss'
 import  { API } from './helpers/api.js'
 import { Card } from './templates/Card.js'
 import { Modal } from './templates/Modal.js'
-
+import { Header } from './templates/Header.js'
 
 const app = async () => {
     // get pictures from the pexels api
     const pictures = await API.getPictures()
+    // selects the main element
+    const main = document.querySelector('.main__container')
+    // selects the loading element
     const loader = document.querySelector('.loader')
-    console.log(pictures.photos)
     // select the grid container
     const pictureGrid = document.querySelector('.card-grid__container')
+    // select the first picture
+    const headerImg = [pictures.photos[9].src.large, pictures.photos[9].src.original, pictures.photos[9].src.large2x]
+    // render the main header
+    main.insertBefore(Header(
+        'The art of skateboarding',
+        'I think everybody has a passion they think the rest of the world is missing out on. For me this passion is skateboarding. When I skate the only thing going through my mind is having fun and not to think about things that stress me out. This image gallery is a loveletter to skateboarding.',
+        headerImg,
+        'main'
+    ), pictureGrid)
+    // render the gallery header
+    main.insertBefore(Header(
+        'Skateboarding is a meditation.',
+        '- Rodney Mullen',
+        null,
+        'secondary'
+    ), pictureGrid)
+    
+    console.log(pictures.photos)
     // loop through pictures array
     pictures.photos.forEach(picture => {
         // select sources to be used in template

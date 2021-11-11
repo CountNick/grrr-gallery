@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'header';
 @import 'card';
 @import 'card-grid';
 @import 'modal';
@@ -15,5 +16,8 @@ body {
 	background: $primary-color;
 	color: $text-color;
 	line-height: 1.5;
-    margin: 5% 10%;
+}
+
+.card-grid__container {
+    margin: $global-margin
 }
