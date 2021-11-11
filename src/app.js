@@ -4,7 +4,7 @@ import { Card } from "./templates/Card.js";
 import { Modal } from "./templates/Modal.js";
 import { Header } from "./templates/Header.js";
 
-const app = async () => {
+const App = async () => {
   // get pictures from the pexels api
   const pictures = await API.getPictures();
   // selects the main element
@@ -13,7 +13,7 @@ const app = async () => {
   const loader = document.querySelector(".loader");
   // select the grid container
   const pictureGrid = document.querySelector(".card-grid__container");
-  // select the first picture
+  // select ninth picture and put size in array to use in template
   const headerImg = [
     pictures.photos[9].src.large,
     pictures.photos[9].src.original,
@@ -104,4 +104,4 @@ const app = async () => {
 };
 
 // init
-app();
+App();
