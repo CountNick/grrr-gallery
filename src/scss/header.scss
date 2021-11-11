@@ -1,32 +1,33 @@
-.header__container {
+// main header styling
+.main-header__container {
     height: 50vh;
     margin-bottom: 20%;
 
-    .header__content {
+    .main-header__content {
         width: 100%;
         height: 100%;
         position: relative;
 
-        .header__title-container {
-            margin: $global-margin;
+        .main-header__title-container {
+            margin: $main-header-margin;
             position: absolute;
             color: $secondary-text-color;
             z-index: 2;
             display: flex;
             flex-direction: column;
-            height: 55%;
+            height: 100%;
             justify-content: space-around;
 
-            .header__title {
+            .main-header__title {
                 text-transform: uppercase;
             }
 
-            .header__subtitle {
+            .main-header__subtitle {
                 line-height: $header-line-height;
             }
         }
 
-        .header__image {
+        .main-header__image {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -41,6 +42,18 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
+        }
+    }
+}
+
+// secondary header styling
+.secondary-header__container {
+    
+    .secondary-header__content {
+        margin: $global-margin;
+        
+        .secondary-header__title {
+            font-size: 1.8em;
         }
     }
 }
