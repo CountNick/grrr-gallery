@@ -12,7 +12,7 @@ export const Card = (src, alt, photographer, id) => {
                 alt="${alt}">
         </div>
         <p class="card__caption" id="${id}">This photo was made by ${photographer}</p>
-        <a class="card__download-btn target="_blank" id=${id}" href="${src[2]}" download>Download</a>
+        <a class="card__download-btn" target="_blank" id=${id}" href="${src[2]}" download>Download</a>
     </section>
     `);
     
