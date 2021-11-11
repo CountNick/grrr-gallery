@@ -38,8 +38,18 @@ const app = async () => {
         // render a card template for each picture and append it to the grid
         pictureGrid.appendChild(Card(picturesSources, `Picture by ${picture.photographer}`, picture.photographer, picture.id))
     })
-    // remove the loader when cards are rendered
-    loader.remove()
+    // set opacity of loader to 0
+    loader.style.opacity = "0"
+    // add event to loader on end of transition
+    loader.addEventListener('transitionend', (e) => {
+        // remove the loader when cards transition ends
+        loader.remove()
+        const mainHeader = document.querySelector('.main-header__container')
+        const secondaryHeader = document.querySelector('.secondary-header__container')
+        mainHeader.style.opacity = 1
+        secondaryHeader.style.opacity = 1
+        pictureGrid.style.opacity = 1
+    })
     // select all cards
     const allCards = document.querySelectorAll('.card__container')
     // add click event to each card

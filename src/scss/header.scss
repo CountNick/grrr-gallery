@@ -1,5 +1,7 @@
 // main header styling
 .main-header__container {
+    opacity: 0;
+    transition: $fade-transition;
     height: 50vh;
     margin-bottom: 20%;
 
@@ -48,6 +50,8 @@
 
 // secondary header styling
 .secondary-header__container {
+    opacity: 0;
+    transition: $fade-transition;
     
     .secondary-header__content {
         margin: $global-margin;

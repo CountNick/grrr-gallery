@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 70%;
+    cursor: $clickable;
 
     .card__image {
         width: 100%;
@@ -15,10 +16,15 @@
         color: $text-color;
         text-decoration: none;
 
-        &:visited {
-            color: $text-color;
-            text-decoration: none;
-        }
+    }
 
+    &:hover, &:active {
+        background: #000;
+        color: $secondary-text-color;
+        
+        .card__download-btn {
+            color: $secondary-text-color;
+    
+        }
     }
 }
