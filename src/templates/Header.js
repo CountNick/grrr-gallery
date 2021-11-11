@@ -11,8 +11,8 @@ export const Header = (title, subtitle, src, alt) => {
                 loading=eager
                 src="${src}"
                 srcset="${src[0]} 480w,
-                    ${src[1]} 750w,
-                    ${src[2]} 1000w"
+                        ${src[2]} 750w,
+                        ${src[2]} 1000w"
                 alt="${alt}"
             >
         </div>

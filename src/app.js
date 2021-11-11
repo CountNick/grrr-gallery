@@ -15,11 +15,11 @@ const app = async () => {
     // select the grid container
     const pictureGrid = document.querySelector('.card-grid__container')
     // select the first picture
-    const headerImg = [pictures.photos[0].src.medium, pictures.photos[0].src.large, pictures.photos[0].src.large2x]
+    const headerImg = [pictures.photos[9].src.large, pictures.photos[9].src.original, pictures.photos[9].src.large2x]
     // render the header
     main.insertBefore(Header(
         'The art of skateboarding',
-        'A responsive gallery about my passion skateboarding made with vanilla js and parcel as build tooling.',
+        'I think everybody has a passion they think the rest of the world is missing out on. For me this passion is skateboarding. When I skate the only thing going through my mind is having fun and not to think about things that stress me out. This image gallery is a loveletter to skateboarding.',
         headerImg
     ), pictureGrid)
     console.log(pictures.photos)

@@ -4,18 +4,43 @@
 
     .header__content {
         width: 100%;
+        height: 100%;
         position: relative;
 
         .header__title-container {
             margin: $global-margin;
             position: absolute;
             color: $secondary-text-color;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            height: 55%;
+            justify-content: space-around;
+
+            .header__title {
+                text-transform: uppercase;
+            }
+
+            .header__subtitle {
+                line-height: $header-line-height;
+            }
         }
 
         .header__image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        &:after {
+            content: ""; // ::before and ::after both require content
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
     }
 }
